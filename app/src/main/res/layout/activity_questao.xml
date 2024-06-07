@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context=".QuestaoActivity">
+
+    <include
+        android:id="@+id/toollbarLayout"
+        layout="@layout/barra_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toollbarLayout"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:weightSum="3">
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/CardViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:backgroundTint="@color/white"
+            app:cardElevation="10dp"
+            app:strokeColor="@color/black"
+            app:strokeWidth="3dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ProgressBar
+                    android:id="@+id/circularProgressBar"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:indeterminateOnly="false"
+                    android:progressDrawable="@drawable/circulo_progresso" />
+
+                <TextView
+                    android:id="@+id/timeTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/circularProgressBar"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"
+                    android:text="60"
+                    android:textColor="@android:color/black"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/noOfQuestiontxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/timeTxt"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginVertical="8dp"
+                    android:text="Questão 1/10"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/CardViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:backgroundTint="@color/white"
+            app:cardElevation="10dp"
+            app:strokeColor="@color/black"
+            app:strokeWidth="3dp">
+
+            <TextView
+                android:id="@+id/questionTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="25 + ? = 50"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/CardViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:backgroundTint="#E8E4E4"
+            app:cardElevation="10dp"
+            app:strokeColor="@color/black"
+            app:strokeWidth="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <Button
+                    android:id="@+id/primeiraopc"
+                    style="@style/Widget.App.Button.Outline"
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:layout_marginVertical="4dp"
+                    android:text="25" />
+
+                <Button
+                    android:id="@+id/segundaopc"
+                    style="@style/Widget.App.Button.Outline"
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:layout_marginVertical="4dp"
+                    android:text="15" />
+
+                <Button
+                    android:id="@+id/terceiraopc"
+                    style="@style/Widget.App.Button.Outline"
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:layout_marginVertical="4dp"
+                    android:text="5" />
+
+                <Button
+                    android:id="@+id/quartaopc"
+                    style="@style/Widget.App.Button.Outline"
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:layout_marginVertical="4dp"
+                    android:text="10" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</RelativeLayout>
